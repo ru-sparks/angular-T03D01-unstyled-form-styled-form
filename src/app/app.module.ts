@@ -3,14 +3,26 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { FeaturesComponent } from './features/features.component';
+import { HomeComponent } from './home/home.component';
+import { PricingComponent } from './pricing/pricing.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { FormData01Component } from './form-data01/form-data01.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    FeaturesComponent,
+    HomeComponent,
+    PricingComponent,
+    PageNotFoundComponent,
+    FormData01Component
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
