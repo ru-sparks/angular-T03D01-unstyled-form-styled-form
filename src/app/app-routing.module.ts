@@ -5,12 +5,14 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { HomeComponent } from './home/home.component';
 import { PricingComponent } from './pricing/pricing.component';
 import { FormData01Component } from './form-data01/form-data01.component';
+import { FormData02Component } from './form-data02/form-data02.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent},
   { path: 'features', component: FeaturesComponent},
   { path: 'pricing', component: PricingComponent},
   { path: 'formdata01', component: FormData01Component},
+  { path: 'formdata02', component: FormData02Component},
   { path: 'pricing', component: PricingComponent},
   { path: '',   redirectTo: '/home', pathMatch: 'full' }, // redirect to `home`
   { path: '**', component: PageNotFoundComponent },  // Wildcard route for a 404 page

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<!-- The classes `container` and `mt-5` are Bootstrap classes used to style HTML elements.
+
+      container
+        - The `container` class in Bootstrap is used to create a fixed-width container for content. 
+        It provides a consistent and centered layout for the content within it.
+
+      2. mt-5
+        - The `mt-5` class is a utility class in Bootstrap that adds margin to the top of the element. 
+        The `m` stands for margin, and `t` is for top. 
+        The number `5` is a spacing scale in Bootstrap's spacing utility, which in this case, 
+        adds a margin of a specific size to the top of the element. The larger the number, the larger the margin.
+        0 - 5 are valid
+ -->
+<div class="container-sm mt-5">
+  <h2 class="mb-4">Submit Form</h2>
+  <form (ngSubmit)="onSubmit()" class="mb-4">
+    <!-- Bootstrap form-group for 'Name' -->
+    <!-- By using form-group, you ensure consistent spacing and alignment for form elements in Bootstrap forms. I
+          t's good practice to use this class whenever you have a label associated with a form control, 
+          as it helps maintain a clean and organized form layout. -->
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <!-- Two-way data binding for 'formData.name' -->
+      <!-- The form-control class is applied to an <input> element, styling it to have consistent width, padding, border, and font properties.  -->
+      <input type="text" id="name" [(ngModel)]="formData.name" name="name" class="form-control" required>
+      <!-- Displaying the value of formData.name in real-time -->
+
+      <p class="text-muted">Value of name: {{ formData.name }}</p>
+    </div>
+
+    <!-- Bootstrap form-group for 'Age' -->
+    <div class="form-group">
+      <label for="age">Age:</label>
+      <!-- Two-way data binding for 'formData.age' -->
+      <input type="number" id="age" [(ngModel)]="formData.age" name="age" class="form-control" required>
+      <!-- Displaying the value of formData.age in real-time -->
+      <p class="text-muted">Value of age: {{ formData.age }}</p>
+    </div>
+
+    <!-- Bootstrap form-group for 'Phone Number' -->
+    <div class="form-group">
+      <label for="phoneNumber">Phone Number:</label>
+      <!-- Two-way data binding for 'formData.phoneNumber' -->
+      <input type="tel" id="phoneNumber" [(ngModel)]="formData.phoneNumber" name="phoneNumber" class="form-control"
+        required>
+      <!-- Displaying the value of formData.phoneNumber in real-time -->
+      <p class="text-muted">Value of phone number: {{ formData.phoneNumber }}</p>
+    </div>
+
+    <!-- Bootstrap form-group for 'Date' -->
+    <div class="form-group">
+      <label for="date">Date:</label>
+      <!-- Two-way data binding for 'formData.date' -->
+      <input type="date" id="date" [(ngModel)]="formData.date" name="date" class="form-control" required>
+      <!-- Displaying the value of formData.date in real-time -->
+      <p class="text-muted">Value of date: {{ formData.date }}</p>
+    </div>
+
+    <!-- Bootstrap submit button -->
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>

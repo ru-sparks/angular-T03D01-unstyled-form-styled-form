@@ -1,18 +1,30 @@
 <div>
   <h1>Submit Form</h1>
+
+  <!-- Binding 'onSubmit()' method to the 'ngSubmit' event of the form -->
   <form (ngSubmit)="onSubmit()">
     <label for="name">Name:</label>
+    <!-- Two-way data binding for 'formData.name' -->
     <input type="text" id="name" [(ngModel)]="formData.name" name="name" required><br><br>
 
     <label for="age">Age:</label>
+    <!-- Two-way data binding for 'formData.age' -->
     <input type="number" id="age" [(ngModel)]="formData.age" name="age" required><br><br>
 
     <label for="phoneNumber">Phone Number:</label>
+    <!-- Two-way data binding for 'formData.phoneNumber' -->
     <input type="tel" id="phoneNumber" [(ngModel)]="formData.phoneNumber" name="phoneNumber" required><br><br>
 
     <label for="date">Date:</label>
+    <!-- Two-way data binding for 'formData.date' -->
     <input type="date" id="date" [(ngModel)]="formData.date" name="date" required><br><br>
 
+    <!-- Submit button for the form -->
     <button type="submit">Submit</button>
+
+    <p>Value of name: {{ formData.name }}</p><br><br>
+    <p>Value of age: {{ formData.age }}</p><br><br>
+    <p>Value of phone number: {{ formData.phoneNumber }}</p><br><br>
+    <p>Value of date: {{ formData.date }}</p><br><br>
   </form>
 </div>
